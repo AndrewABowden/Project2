@@ -1,6 +1,7 @@
 module.exports = function(app) {
-
-    app.get('/', function(req, res) {
+    
+    // Simple get route to see handlebars working
+    app.get("/", function(req, res) {
         res.render('index');
     });
 };
