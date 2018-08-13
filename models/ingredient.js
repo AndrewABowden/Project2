@@ -16,5 +16,15 @@ module.exports = function (sequelize, DataTypes) {
         {
             timestamps: false
         });
+
+        Ingredients.associate = function(models) {
+            // Associating Author with Posts
+            // When an Author is deleted, also delete any associated Posts
+            Ingredients.hasMany(models.drink_contents, {
+                foreignKey: "ingredient_id",
+            });
+          };
+
+
         return Ingredients;
 };
