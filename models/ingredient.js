@@ -17,6 +17,7 @@ module.exports = function (sequelize, DataTypes) {
             timestamps: false
         });
 
+<<<<<<< Updated upstream
         Ingredients.associate = function(models) {
             // Associating Ingredients with drink contents
             Ingredients.hasMany(models.drink_contents, {
@@ -24,6 +25,15 @@ module.exports = function (sequelize, DataTypes) {
             });
           };
 
+=======
+        // Ingredients.associate = function(models) {
+        //     // Associating Ingredients with Drinks
+        //     // When an Ingredients is deleted, also delete any associated Posts
+        //     Ingredients.hasMany(models.Post, {
+        //       onDelete: "cascade"
+        //     });
+        //   };
+>>>>>>> Stashed changes
 
         return Ingredients;
 };
