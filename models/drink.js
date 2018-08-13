@@ -30,8 +30,7 @@ module.exports = function (sequelize, DataTypes) {
         });
 
         Drinks.associate = function(models) {
-            // Associating Author with Posts
-            // When an Author is deleted, also delete any associated Posts
+            // Associating Drinks with drink_contents
             Drinks.hasMany(models.drink_contents, {
                 foreignKey: "drink_id",
             });
