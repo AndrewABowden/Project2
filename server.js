@@ -10,7 +10,7 @@ var bodyParser = require("body-parser");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -25,11 +25,17 @@ app.use(bodyParser.json());
 // Static directory
 app.use(express.static("public"));
 
+// Set Handlebars
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Routes
 // =============================================================
-require("./routes/html-routes.js")(app);
-require("./routes/drinks-api-routes.js")(app);
-require("./routes/ingredients-api-routes.js")(app);
+require("./controllers/html_controller.js")(app);
+require("./controllers/drink_controller.js")(app);
+require("./controllers/ingredient_controller.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
