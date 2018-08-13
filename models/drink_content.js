@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var drink_contents = sequelize.define("drink_content",
+    var Drink_contents = sequelize.define("drink_contents",
         {
             drink_id: {
                 type: DataTypes.INTEGER,
@@ -17,4 +17,5 @@ module.exports = function (sequelize, DataTypes) {
         {
             timestamps: false
         });
+        return Drink_contents;
 };

@@ -2,7 +2,7 @@
   "development": {
     "username": "drinksdb",
     "password": "drinksdb",
-    "database": "database_development",
+    "database": "drinks_db",
     "host": "www.mory.io",
     "dialect": "mysql"
   },
