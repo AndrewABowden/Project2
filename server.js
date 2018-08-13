@@ -33,9 +33,9 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-require("./routes/html-routes.js")(app);
-require("./routes/drinks-api-routes.js")(app);
-require("./routes/ingredients-api-routes.js")(app);
+require("./controllers/html_controller.js")(app);
+require("./controllers/drink_controller.js")(app);
+require("./controllers/ingredient_controller.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
