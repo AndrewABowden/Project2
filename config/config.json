@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "drinksdb",
-    "password": "drinksdb",
+    "username": "root",
+    "password": "root",
     "database": "drinks_db",
-    "host": "www.mory.io",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {

@@ -9,4 +9,17 @@ module.exports = function(app) {
             res.json(dbDrinks);
         })
     })
+
+        // Route to get all drinks with searched ingredients
+        app.get("/api/drinks/:ingID", function(req, res) {
+            var searchParams = req.params.ingID.split("&");
+            db.drinks.findAll( {            
+                include: [{
+                    model: db.drink_contents,
+                    where: {ingredient_id: searchParams[0]}}]     
+            })
+            .then (function(dbDrinks) {
+                res.json(dbDrinks);
+            })
+        })
 };
