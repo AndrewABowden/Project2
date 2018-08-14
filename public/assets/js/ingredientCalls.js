@@ -1,4 +1,8 @@
-var substringMatcher = function(strs) {
+var ingredientsNameArray = [];
+
+// Typeahead start
+// ============================================================================
+var substringMatcher = function (strs) {
     return function findMatches(q, cb) {
         var matches, substringRegex;
 
@@ -20,13 +24,10 @@ var substringMatcher = function(strs) {
     };
 };
 
-
-$.get("/api/ingredients", function(data) {
-    console.log(data);
+$.get("/api/ingredients", function (data) {
     var ingredientNames = data.map((ingredient) => {
         return ingredient.name;
     });
-    console.log(ingredientNames);
     $('#ingredients-menu .typeahead').typeahead(
         {
             hint: true,
@@ -36,5 +37,15 @@ $.get("/api/ingredients", function(data) {
         {
             name: 'ingredientNames',
             source: substringMatcher(ingredientNames)
-        });
+        }
+    );
+    // Listener
+    $('#ingredients-menu .typeahead').on('typeahead:select', function (ev, ingredientSuggestion) {
+        console.log('Selection: ' + ingredientSuggestion);
+        ingredientsNameArray.push(ingredientSuggestion);
+        console.log(ingredientsNameArray);
+    });
 });
+// ============================================================================
+// Typeahead end
+
