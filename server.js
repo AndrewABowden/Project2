@@ -11,7 +11,7 @@ var bodyParser = require("body-parser");
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
-
+var path = require('path');
 // Requiring our models for syncing
 var db = require("./models");
 
@@ -24,6 +24,7 @@ app.use(bodyParser.json());
 
 // Static directory
 app.use(express.static("public"));
+// app.use(express.static(path.join(__dirname, '/assets')));
 
 // Set Handlebars
 var exphbs = require("express-handlebars");

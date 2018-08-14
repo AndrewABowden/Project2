@@ -1,0 +1,293 @@
+$desktop: 840px;
+$mobile: 661px;
+$small: 660px;
+
+//responsive media queries, for 840px desktop
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+};
+
+@mixin mobile {
+    @media (min-width: #{$mobile}) {
+        @content;
+    }
+};
+
+@mixin small {
+  @media (max-width: #{$small}) {
+    @content;
+  }
+}
+//primary is a key because the $ sign.
+//alt L + 0 to open live server, port 5500
+$colors: (
+primary: rgb(46, 4, 63), //key primary
+accent: #fff6bb, //key accent
+primary-light: lighten(rgb(46, 4, 63), 50%),
+primary-dark: darken(rgb(46, 4, 63), 70%)
+);
+
+@function color($color-name) {
+  @return map-get($colors, primary);
+};
+
+$padding: 15px;
+$borders: 15px;
+
+
+
+body,
+html {
+  height: 100%;
+};
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+};
+body {
+  // background-color: map-get($colors, primary);//argument, then primary is key.
+  font-family: "Monteserrat";
+  margin: 0;
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #bg {
+    // clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0);
+    // background-color: color(primary);
+    background-image: url("http://wallpapersdsc.net/wp-content/uploads/2016/09/Cocktail-HD.jpg");
+    // min-width: 100%;
+    // min-height: 100%;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: fixed;
+    z-index: -1;
+
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+    background-size: cover;
+// background-size:contain;
+// background-position:center;
+   
+    @include small{
+      #smallbg {
+        background-image: url("assets/images/bgsmall.jpg");
+      }
+  };
+  .navLinks {
+    margin-top: -20px;
+    width: 100%;
+    text-align: center;
+    padding-left:0px;
+  }
+  .navLinks a {
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 1.3em;
+    text-decoration: uppercase;
+    animation: bounceIn 3s;
+  };
+
+};
+// Main content class, lighter color
+.content {
+  background-color: rgb(220, 221, 210);
+
+  //background-image: url("https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?cs=srgb&dl=cold-alcohol-drinks-1028637.jpg&fm=jpg");
+} 
+main {
+   
+    @include desktop {
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "primary card";    
+    };
+
+    @include mobile {
+      display: grid;
+      grid-template-columns:  50% auto;
+      grid-template-areas: "primary card";
+    };
+
+    @include small {
+     padding-top: 20px;
+      grid-template-areas: "primary card";
+    }
+   
+  section#card {
+    
+    background: rgb(46, 4, 63);
+    color: ghostwhite;
+    margin: .7em auto; //Centers section
+    border-radius: $borders;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    // 0 is x value, 10px is y value. || blur radius 30px || .2 is the opacity.
+    width: 80%;
+    padding: 10px;
+ 
+
+    h2 {
+        margin: 1em auto;
+        text-align: center;
+        margin-bottom: 0;
+        animation: bounceIn 4s;
+        font-size: 1.3em;
+    }
+    
+    @include desktop {
+        grid-area: card;
+        height: fit-content;
+        align-self: center;
+        margin: 1em;
+    };
+
+    @include mobile {
+        grid-area: card;
+        align-self: center;
+        margin: 1em auto;
+    };
+    @include small {
+      grid-area: card;
+        height: fit-content;
+        align-self: center;       
+      margin: 1em auto;
+    }
+  };
+  
+  p {
+    display: inline-block;
+    margin-left: max(15px);
+    margin-top: 12px;
+    
+    };
+  };
+
+  section#primary {
+    color: black;
+    padding: $padding;
+    text-align: center;
+
+    @include desktop {
+        grid-area: primary;
+        text-align: left;
+        margin: 4em 0 0 4em;
+        
+    };
+
+    @include mobile {
+        grid-area: primary; 
+        text-align: center;
+        margin: 1em auto;
+        margin: 4em 0 0 4em;
+    };
+
+    @include small {
+      grid-area: primary; 
+      text-align: center;
+
+      margin: 4em auto;
+      padding: $padding;
+    }
+
+    h2 {
+      font-size: 1.7em;
+      margin-top: 10px;
+      text-transform: uppercase;
+
+      @include desktop {
+          width: 30%; //makes each on its own line
+          font-size: 4em;
+        };
+        @include mobile {
+            font-size: 2.5em;
+        }
+        @include small {
+          font-size: 1.5em;
+        }
+    };
+    p {
+      font-size: 1.4em;
+    };
+    a {
+      color: color(primary-dark);
+      border-radius: $borders;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: color(accent);
+      display: block;
+      text-align: center;
+      margin: 50px auto 0 auto;
+      padding: $padding;
+
+      @include desktop {
+        display: inline-block;
+        padding: $padding $padding * 4; //right and left, multiplies by 4 for desktop button vis
+        
+    };
+    @include mobile {
+        display: inline-block;
+        padding: $padding $padding * 4;
+    };
+    @include small {
+      display: inline-block;
+      padding: $padding;
+    }
+  };
+};
+
+footer {
+    background-color: color(primary-light);
+}
+// /* This CSS won't print because %equal-heights is never extended. */
+// %equal-heights {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+// // This CSS will print because %message-shared is extended.
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+};
+.message {
+  @extend %message-shared;
+};
+.success {
+  @extend %message-shared;
+  border-color: green;
+};
+.error {
+  @extend %message-shared;
+  border-color: red;
+};
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+};
+
+/* Header Animation */
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

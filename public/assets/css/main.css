@@ -1,0 +1,300 @@
+body,
+html {
+  height: 100%;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+body {
+  font-family: "Monteserrat";
+  margin: 0;
+}
+
+body .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body #bg {
+  background-image: url("http://wallpapersdsc.net/wp-content/uploads/2016/09/Cocktail-HD.jpg");
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  z-index: -1;
+}
+
+body #bg #smallbg {
+  background-image: url("assets/images/bgsmall.jpg");
+}
+
+body .navLinks {
+  margin-top: -20px;
+  width: 100%;
+  text-align: center;
+  padding-left: 0px;
+}
+
+body .navLinks a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 1.3em;
+  -webkit-text-decoration: uppercase;
+          text-decoration: uppercase;
+  -webkit-animation: bounceIn 3s;
+          animation: bounceIn 3s;
+}
+
+.content {
+  background-color: #dcddd2;
+}
+
+@media (min-width: 840px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% auto;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "primary card";
+  }
+}
+
+@media (min-width: 661px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% auto;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "primary card";
+  }
+}
+
+@media (max-width: 660px) {
+  main {
+    padding-top: 20px;
+        grid-template-areas: "primary card";
+  }
+}
+
+main section#card {
+  background: #2e043f;
+  color: ghostwhite;
+  margin: .7em auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  padding: 10px;
+}
+
+main section#card h2 {
+  margin: 1em auto;
+  text-align: center;
+  margin-bottom: 0;
+  -webkit-animation: bounceIn 4s;
+          animation: bounceIn 4s;
+  font-size: 1.3em;
+}
+
+@media (min-width: 840px) {
+  main section#card {
+    grid-area: card;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 1em;
+  }
+}
+
+@media (min-width: 661px) {
+  main section#card {
+    grid-area: card;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 1em auto;
+  }
+}
+
+@media (max-width: 660px) {
+  main section#card {
+    grid-area: card;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 1em auto;
+  }
+}
+
+main p {
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 12px;
+}
+
+section#primary {
+  color: black;
+  padding: 15px;
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  section#primary {
+    grid-area: primary;
+    text-align: left;
+    margin: 4em 0 0 4em;
+  }
+}
+
+@media (min-width: 661px) {
+  section#primary {
+    grid-area: primary;
+    text-align: center;
+    margin: 1em auto;
+    margin: 4em 0 0 4em;
+  }
+}
+
+@media (max-width: 660px) {
+  section#primary {
+    grid-area: primary;
+    text-align: center;
+    margin: 4em auto;
+    padding: 15px;
+  }
+}
+
+section#primary h2 {
+  font-size: 1.7em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 840px) {
+  section#primary h2 {
+    width: 30%;
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 661px) {
+  section#primary h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 660px) {
+  section#primary h2 {
+    font-size: 1.5em;
+  }
+}
+
+section#primary p {
+  font-size: 1.4em;
+}
+
+section#primary a {
+  color: #2e043f;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #2e043f;
+  display: block;
+  text-align: center;
+  margin: 50px auto 0 auto;
+  padding: 15px;
+}
+
+@media (min-width: 840px) {
+  section#primary a {
+    display: inline-block;
+    padding: 15px 60px;
+  }
+}
+
+@media (min-width: 661px) {
+  section#primary a {
+    display: inline-block;
+    padding: 15px 60px;
+  }
+}
+
+@media (max-width: 660px) {
+  section#primary a {
+    display: inline-block;
+    padding: 15px;
+  }
+}
+
+footer {
+  background-color: #2e043f;
+}
+
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+/* Header Animation */
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=main.css.map */
