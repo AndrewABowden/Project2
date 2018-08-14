@@ -23,8 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Static directory
-// app.use(express.static("public"));
-app.use(express.static(path.join(__dirname, '/assets')));
+app.use(express.static("public"));
+// app.use(express.static(path.join(__dirname, '/assets')));
 
 // Set Handlebars
 var exphbs = require("express-handlebars");
