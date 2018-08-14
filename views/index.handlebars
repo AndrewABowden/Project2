@@ -40,14 +40,13 @@
                 </p>
             </section>
             <section id="primary">
+                    <h1>Create your drink by adding ingredients below!</h1>
                 <form id="myForm" action=""></form>
                 <div class="form-group">
-                    <h3>Create your drink by adding ingredients below!</h3>
-                    <!--Search Term-->
-                    
-                    <input class="typeahead form-control" id="add-Ingredient" type="text" value="" placeholder="....">
+                    <!--Search Term-->        
+                    {{!-- <input class="typeahead form-control" id="add-Ingredient" type="text" value="" placeholder="...."> --}}
                     <div id="ingredients-menu">
-    <input class="typeahead form-control" type="text" placeholder="ingredient">
+    <input class="typeahead form-control" type="text" placeholder="Add ingredient">
 
 </div>
 <br>
@@ -60,7 +59,14 @@
         </main>
     <!-- Content area end -->
             <div id="results-display">
-                <p>test</p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>This is where content will go for food</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>This is where content will go for potential recipes</p>
+                    </div>
+                </div>
             </div>
             <!--Results Form End div-->
 
@@ -72,7 +78,9 @@
         </div>
     </footer>
 
+<!-- Typehead script
 <div id="ingredients-menu">
     <input class="typeahead form-control" type="text" placeholder="ingredient">
 
-</div>
+</div> 
+-->
