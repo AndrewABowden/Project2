@@ -1,4 +1,5 @@
 var ingredientsNameArray = [];
+var ingredientsObjArray = [];
 
 // Typeahead start
 // ============================================================================
@@ -41,11 +42,21 @@ $.get("/api/ingredients", function (data) {
     );
     // Listener
     $('#ingredients-menu .typeahead').on('typeahead:select', function (ev, ingredientSuggestion) {
-        console.log('Selection: ' + ingredientSuggestion);
+        console.log("SELECTED: " + ingredientSuggestion)
         ingredientsNameArray.push(ingredientSuggestion);
-        console.log(ingredientsNameArray);
-    });
+        getIngredients()
+        var ingSpan = $("<span>").text(ingredientSuggestion);
+        $(".ingredient-list").append(ingSpan);
+    })
 });
 // ============================================================================
 // Typeahead end
 
+function getIngredients() {
+    ingredientsNameArray.forEach((ing) => {
+        $.get("/api/ingredients/" + ing, function (data) {
+            ingredientsObjArray.push(data);
+        })
+        console.log(ingredientsObjArray)
+    })
+}
