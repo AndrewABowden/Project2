@@ -42,21 +42,40 @@ $.get("/api/ingredients", function (data) {
     );
     // Listener
     $('#ingredients-menu .typeahead').on('typeahead:select', function (ev, ingredientSuggestion) {
-        console.log("SELECTED: " + ingredientSuggestion)
         ingredientsNameArray.push(ingredientSuggestion);
-        getIngredients()
-        var ingSpan = $("<span>").text(ingredientSuggestion);
-        $(".ingredient-list").append(ingSpan);
-    })
+        replaceDisplay();
+        // getIngredients();
+        var ingLI = $("<li>").text(ingredientSuggestion);
+        var ingDeleteBtn = $("<button>").addClass("ingDelete").text("Delete");
+        $(ingLI).append(ingDeleteBtn);
+        $(".added-ingredients").append(ingLI);
+        $('.typeahead').typeahead('val', '');
+    });
 });
-// ============================================================================
-// Typeahead end
+    // ============================================================================
+    // Typeahead end
+   
 
+//Get ingredient objects from name and populating ingredientObjArray
 function getIngredients() {
     ingredientsNameArray.forEach((ing) => {
         $.get("/api/ingredients/" + ing, function (data) {
             ingredientsObjArray.push(data);
-        })
-        console.log(ingredientsObjArray)
+            console.log(ingredientsObjArray)
+        });
     })
 }
+
+// Replace welcome content w/ ingredient list
+function replaceDisplay() {
+    if (ingredientsNameArray.length === 1) {
+        var ingUL = $("<ul>").addClass("added-ingredients");
+        $("#card-Ingredients").replaceWith(ingUL);
+    }
+}
+
+// Link typeahead search to drink api
+
+// ingredientsObjArray.forEach((obj) => {
+//     console.log(obj);
+// });

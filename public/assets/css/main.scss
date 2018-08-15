@@ -59,29 +59,16 @@ body {
   }
   #bg {
     // clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0);
-    // background-color: color(primary);
-    background-image: url("http://wallpapersdsc.net/wp-content/uploads/2016/09/Cocktail-HD.jpg");
+    background-color: black;
     // min-width: 100%;
     // min-height: 100%;
     background-repeat:no-repeat;
     background-position: center center;
     background-attachment: fixed;
     position: fixed;
-    z-index: -1;
 
-    -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-    background-size: cover;
-// background-size:contain;
-// background-position:center;
    
-    @include small{
-      #smallbg {
-        background-image: url("assets/images/bgsmall.jpg");
-      }
-  };
-  .navLinks {
+vLinks {
     margin-top: -20px;
     width: 100%;
     text-align: center;

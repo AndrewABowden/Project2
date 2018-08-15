@@ -9,21 +9,22 @@
     <div class='container-fluid'>
         <nav>
             <div class='navLinks'>
+                {{!--
                 <a href="index.html" class="icon text-center active">Home
                     <i class="fa fa-home"></i>
-                </a>
-                <a href="index.html" class="icon text-center">Wizard
+                </a> --}}
+                <a href="ingredient.html" class="icon text-center">Add Ingredient
                     <i class="fa fa-coffee"></i>
                 </a>
-                <a href="index.html" class="icon text-center">Contact
-                    <i class="fa fa-comment"></i>
+                <a href="recipe.html" class="icon text-center">Add Recipe
+                    <i class="fa fa-cloud-upload"></i>
                 </a>
             </div>
         </nav>
     </div>
-    <div class='content'>
-        <main>
-            <section id="card">
+    <main class='content'>
+        <section id="card">
+            <div id="card-Ingredients">
                 <h2>
                     Welcome to the Cocktail Wizard
                 </h2>
@@ -38,35 +39,55 @@
                     <b class='fa fa-magic'></b>
                     Just wait for the magic..
                 </p>
-            </section>
-            <section id="primary">
-                <h1>Create your drink by adding ingredients below!</h1>
-                <div class="form-group">
-                    <div id="ingredients-menu">
-                        <input class="typeahead form-control" type="text" placeholder="Add ingredient">
+            </div>
+        </section>
+        <section id="primary">
+            <h3>Create your drink by adding ingredients below!</h3>
+            <br>
+
+            <div class="form-group">
+                <!--Search Term-->
+                {{!--
+                <input class="typeahead form-control" id="add-Ingredient" type="text" value="" placeholder="...."> --}}
+                <div id="ingredients-menu">
+                    <input class="typeahead form-control" type="text" placeholder="Add ingredient">
+
+                </div>
+                <br>
+            </div>
+
+        </section>
+        <!-- Content area end -->
+    </main>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div id="leftCard" class="card-body">
+                    <p class="card-title">This is were content will go for food</p>
+                    <div>
+                        <!-- incoming content -->
                     </div>
                 </div>
-            </section>
-        </main>
-        <!-- Content area end -->
-        <div id="results-display">
-            <div class="row">
-                <div class="col-sm-6 ingredient-list">
-                    <p>This is where content will go for ingredients</p>
-                </div>
-                <div class="col-sm-6">
-                    <p>This is where content will go for potential recipes</p>
+            </div>
+            <div class="card">
+                <div id="rightCard" class="card-body">
+                    <p class="card-title">This is where content will go for potential recipes</p>
+                    <div>
+                        <!-- incoming content -->
+                    </div>
                 </div>
             </div>
         </div>
-        <!--Results Form End div-->
-
     </div>
-    <!-- Footer Links -->
-    <footer>
-        <div class="footer">Created by
-            <b>House Lannister</b>
-        </div>
-    </footer>
     {{!--
 </div> --}}
+
+
+<!--Results Form End div-->
+
+<!-- Footer Links -->
+<footer>
+    <div class="footer">Created by
+        <b>House Lannister</b>
+    </div>
+</footer>
