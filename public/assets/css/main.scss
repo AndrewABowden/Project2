@@ -36,8 +36,6 @@ primary-dark: darken(rgb(46, 4, 63), 70%)
 $padding: 15px;
 $borders: 15px;
 
-
-
 body,
 html {
   height: 100%;
@@ -47,6 +45,11 @@ html {
   padding-left: 0px;
   padding-right: 0px;
 };
+
+html {
+  
+}
+
 body {
   // background-color: map-get($colors, primary);//argument, then primary is key.
   font-family: "Monteserrat";
@@ -59,28 +62,27 @@ body {
   }
   #bg {
     // clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0);
-    // background-color: color(primary);
-    background-image: url("http://wallpapersdsc.net/wp-content/uploads/2016/09/Cocktail-HD.jpg");
-    // min-width: 100%;
-    // min-height: 100%;
-    background-repeat:no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    position: fixed;
-    z-index: -1;
+    // background-color: black;
 
-    -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-    background-size: cover;
-// background-size:contain;
-// background-position:center;
-   
-    @include small{
-      #smallbg {
-        background-image: url("assets/images/bgsmall.jpg");
-      }
-  };
+    // background-image: url("public/assets/images/black_wood.jpeg");
+     background-image: url("http://getwallpapers.com/wallpaper/full/8/8/4/858416-cool-black-backgrounds-2560x1600-for-samsung.jpg");
+  
+     background-size: 1005%;
+   }
+    //  min-width: 100%;
+      // min-height: 100%;
+
+//     background-repeat:no-repeat;
+//     background-position: center;
+//     background-attachment: fixed;
+    // position: absolute;
+//     z-index: -1;
+
+  //   @include small{
+  //     #smallbg {
+  //       background-image: url("assets/images/bgsmall.jpg");
+  //     }
+  // };
   .navLinks {
     margin-top: -20px;
     width: 100%;
@@ -102,7 +104,7 @@ body {
 // Main content class, lighter color
 .content {
   background-color: rgb(220, 221, 210);
-
+  
   //background-image: url("https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?cs=srgb&dl=cold-alcohol-drinks-1028637.jpg&fm=jpg");
 } 
 main {
@@ -246,6 +248,7 @@ main {
   };
 };
 
+}
 footer {
     background-color: color(primary-light);
 }
