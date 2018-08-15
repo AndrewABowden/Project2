@@ -44,7 +44,7 @@ $.get("/api/ingredients", function (data) {
     $('#ingredients-menu .typeahead').on('typeahead:select', function (ev, ingredientSuggestion) {
         ingredientsNameArray.push(ingredientSuggestion);
         replaceDisplay();
-        // getIngredients();
+        getIngredients();
         var ingLI = $("<li>").text(ingredientSuggestion);
         var ingDeleteBtn = $("<button>").addClass("ingDelete").text("Delete");
         $(ingLI).append(ingDeleteBtn);
@@ -52,9 +52,8 @@ $.get("/api/ingredients", function (data) {
         $('.typeahead').typeahead('val', '');
     });
 });
-    // ============================================================================
-    // Typeahead end
-   
+// ============================================================================
+// Typeahead end
 
 //Get ingredient objects from name and populating ingredientObjArray
 function getIngredients() {

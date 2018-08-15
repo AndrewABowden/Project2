@@ -1,6 +1,5 @@
 <!-- Gives entire background attributes of bg ID for easy content styling within-->
-{{!--
-<div id="bg"> --}}
+<div id="bg">
 
     <!-- Nav Menu -->
     <header id="headerWrapper">
@@ -9,10 +8,6 @@
     <div class='container-fluid'>
         <nav>
             <div class='navLinks'>
-                {{!--
-                <a href="index.html" class="icon text-center active">Home
-                    <i class="fa fa-home"></i>
-                </a> --}}
                 <a href="ingredient.html" class="icon text-center">Add Ingredient
                     <i class="fa fa-coffee"></i>
                 </a>
@@ -22,72 +17,65 @@
             </div>
         </nav>
     </div>
-    <main class='content'>
-        <section id="card">
-            <div id="card-Ingredients">
-                <h2>
-                    Welcome to the Cocktail Wizard
-                </h2>
-                <p class="cardData">
-                    <b class='fa fa-list'> What kind of ingredients do you have?</b>
-                </p>
-                <p class="cardData">
-                    <b class='fa fa-lemon-o'></b>
-                    Tell us and we'll mix you a drink!
-                </p>
-                <p class="cardData">
-                    <b class='fa fa-magic'></b>
-                    Just wait for the magic..
-                </p>
-            </div>
-        </section>
-        <section id="primary">
-            <h3>Create your drink by adding ingredients below!</h3>
-            <br>
+    <div>
+        <main class='content'>
+            <section id="card">
+                <div id="card-Ingredients">
 
-            <div class="form-group">
-                <!--Search Term-->
-                {{!--
-                <input class="typeahead form-control" id="add-Ingredient" type="text" value="" placeholder="...."> --}}
-                <div id="ingredients-menu">
-                    <input class="typeahead form-control" type="text" placeholder="Add ingredient">
+                    <h2>
+                        Welcome to the Cocktail Wizard
+                    </h2>
+                    <p class="cardData fa fa-list">
+                        What kind of ingredients do you have?
+                    </p>
+                    <p class="cardData fa fa-lemon-o">
 
+                        Tell us and we'll mix you a drink!
+                    </p>
+                    <p class="cardData fa fa-magic">
+
+                        Just wait for the magic..
+                    </p>
                 </div>
-                <br>
-            </div>
+            </section>
+            <section id="primary">
+                <h3>Create your drink by adding ingredients below!</h3>
+                <div class="form-group">
+                    <div id="ingredients-menu">
+                        <input class="typeahead form-control" type="text" placeholder="Add ingredient">
 
-        </section>
-        <!-- Content area end -->
-    </main>
-    <div class="container">
-        <div class="row">
-            <div class="card">
-                <div id="leftCard" class="card-body">
-                    <p class="card-title">This is were content will go for food</p>
-                    <div>
-                        <!-- incoming content -->
+                    </div>
+                    <br>
+                </div>
+            </section>
+            <!-- Content area end -->
+        </main>
+        <div class="container-fluid cardContainer">
+            <div class="row">
+                <div class="card col-sm-5 col-11 ">
+                    <div id="leftCard" class="card-body">
+                        <p class="card-title">This is where content will go for food</p>
+                        <div>
+                            <!-- incoming content -->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div id="rightCard" class="card-body">
-                    <p class="card-title">This is where content will go for potential recipes</p>
-                    <div>
-                        <!-- incoming content -->
+
+                <div class="card col-sm-5 col-11">
+                    <div id="rightCard" class="card-body">
+                        <p class="card-title">This is where content will go for potential recipes</p>
+                        <div>
+                            <!-- incoming content -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{!--
-</div> --}}
 
-
-<!--Results Form End div-->
-
-<!-- Footer Links -->
-<footer>
-    <div class="footer">Created by
-        <b>House Lannister</b>
-    </div>
-</footer>
+    <!-- Footer Links -->
+    <footer>
+        <div class="footer">Created by
+            <b>House Lannister</b>
+        </div>
+    </footer>
