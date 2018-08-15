@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Monteserrat";
+  font-family: 'Cormorant Garamond', serif;
   margin: 0;
 }
 
@@ -20,18 +20,20 @@ body .center {
 }
 
 body #bg {
-  background: contain;
-  background-image: url("http://getwallpapers.com/wallpaper/full/8/8/4/858416-cool-black-backgrounds-2560x1600-for-samsung.jpg");
+  background-image: url("../images/black_denim.png");
+  position: fixed;
+  min-height: 100%;
+  min-width: 100%;
 }
 
-body #bg .navLinks {
+body .navLinks {
   margin-top: -20px;
   width: 100%;
   text-align: center;
   padding-left: 0px;
 }
 
-body #bg .navLinks a {
+body .navLinks a {
   color: whitesmoke;
   text-decoration: none;
   text-align: center;
@@ -42,14 +44,15 @@ body #bg .navLinks a {
           text-decoration: uppercase;
   -webkit-animation: bounceIn 3s;
           animation: bounceIn 3s;
+  font-family: 'Cormorant Garamond', serif;
 }
 
-body .content {
+.content {
   background-color: #dcddd2;
 }
 
 @media (min-width: 840px) {
-  body main {
+  main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% auto;
@@ -59,7 +62,7 @@ body .content {
 }
 
 @media (min-width: 661px) {
-  body main {
+  main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% auto;
@@ -69,13 +72,13 @@ body .content {
 }
 
 @media (max-width: 660px) {
-  body main {
+  main {
     padding-top: 20px;
         grid-template-areas: "primary card";
   }
 }
 
-body main section#card {
+main section#card {
   background: #2e043f;
   color: ghostwhite;
   margin: .7em auto;
@@ -86,7 +89,7 @@ body main section#card {
   padding: 10px;
 }
 
-body main section#card h2 {
+main section#card h2 {
   margin: 1em auto;
   text-align: center;
   margin-bottom: 0;
@@ -96,7 +99,7 @@ body main section#card h2 {
 }
 
 @media (min-width: 840px) {
-  body main section#card {
+  main section#card {
     grid-area: card;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -109,7 +112,7 @@ body main section#card h2 {
 }
 
 @media (min-width: 661px) {
-  body main section#card {
+  main section#card {
     grid-area: card;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -119,7 +122,7 @@ body main section#card h2 {
 }
 
 @media (max-width: 660px) {
-  body main section#card {
+  main section#card {
     grid-area: card;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -131,74 +134,58 @@ body main section#card h2 {
   }
 }
 
-body main p {
+main p {
   display: inline-block;
   margin-left: 15px;
   margin-top: 12px;
 }
 
-body section#primary {
+section#primary {
   color: black;
   padding: 15px;
   text-align: center;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 @media (min-width: 840px) {
-  body section#primary {
+  section#primary {
     grid-area: primary;
-    text-align: left;
     margin: 4em 0 0 4em;
   }
 }
 
-@media (min-width: 661px) {
-  body section#primary {
-    grid-area: primary;
-    text-align: center;
-    margin: 1em auto;
-    margin: 4em 0 0 4em;
-  }
-}
-
-@media (max-width: 660px) {
-  body section#primary {
-    grid-area: primary;
-    text-align: center;
-    margin: 4em auto;
-    padding: 15px;
-  }
-}
-
-body section#primary h2 {
+section#primary h2 {
   font-size: 1.7em;
   margin-top: 10px;
   text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 @media (min-width: 840px) {
-  body section#primary h2 {
+  section#primary h2 {
     width: 30%;
     font-size: 4em;
   }
 }
 
 @media (min-width: 661px) {
-  body section#primary h2 {
+  section#primary h2 {
     font-size: 2.5em;
   }
 }
 
 @media (max-width: 660px) {
-  body section#primary h2 {
+  section#primary h2 {
     font-size: 1.5em;
   }
 }
 
-body section#primary p {
+section#primary p {
   font-size: 1.4em;
+  font-family: 'Cormorant Garamond', serif;
 }
 
-body section#primary a {
+section#primary a {
   color: #2e043f;
   border-radius: 15px;
   text-decoration: none;
@@ -209,49 +196,57 @@ body section#primary a {
   text-align: center;
   margin: 50px auto 0 auto;
   padding: 15px;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 @media (min-width: 840px) {
-  body section#primary a {
+  section#primary a {
     display: inline-block;
     padding: 15px 60px;
   }
 }
 
 @media (min-width: 661px) {
-  body section#primary a {
+  section#primary a {
     display: inline-block;
     padding: 15px 60px;
   }
 }
 
 @media (max-width: 660px) {
-  body section#primary a {
+  section#primary a {
     display: inline-block;
     padding: 15px;
   }
 }
 
 footer {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.2em;
+  text-shadow: #333;
   background-color: #2e043f;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Height of the footer */
 }
 
-.message, .success, .error, .warning {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+.cardContainer {
+  color: black;
+  font-size: 18px;
+  font-style: unset;
 }
 
-.success {
-  border-color: green;
+.cardContainer .col-12 {
+  margin-top: 15px;
 }
 
-.error {
-  border-color: red;
-}
-
-.warning {
-  border-color: yellow;
+.cardContainer .col-sm-5 {
+  margin: 1em auto;
+  background-color: #B7FF00;
 }
 
 /* Header Animation */

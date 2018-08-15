@@ -46,13 +46,10 @@ html {
   padding-right: 0px;
 };
 
-html {
-  
-}
 
 body {
   // background-color: map-get($colors, primary);//argument, then primary is key.
-  font-family: "Monteserrat";
+  font-family: 'Cormorant Garamond', serif;
   margin: 0;
 
   .center {
@@ -65,24 +62,16 @@ body {
     // background-color: black;
 
     // background-image: url("public/assets/images/black_wood.jpeg");
-     background-image: url("http://getwallpapers.com/wallpaper/full/8/8/4/858416-cool-black-backgrounds-2560x1600-for-samsung.jpg");
-  
-     background-size: 1005%;
-   }
-    //  min-width: 100%;
-      // min-height: 100%;
+       background-image: url("../images/black_denim.png");
+      //  url("https://www.toptal.com/designers/subtlepatterns/patterns/connectwork.png");
+    // background-image: url("http://www.designbolts.com/wp-content/uploads/2012/11/Free-Professional-Dark-Carbon-Patterns.jpg");
 
-//     background-repeat:no-repeat;
-//     background-position: center;
-//     background-attachment: fixed;
-    // position: absolute;
-//     z-index: -1;
-
-  //   @include small{
-  //     #smallbg {
-  //       background-image: url("assets/images/bgsmall.jpg");
-  //     }
-  // };
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    // background-size: 100%;
+  };
+ 
   .navLinks {
     margin-top: -20px;
     width: 100%;
@@ -98,6 +87,7 @@ body {
     margin-top: 1.3em;
     text-decoration: uppercase;
     animation: bounceIn 3s;
+    font-family: 'Cormorant Garamond', serif;
   };
 
 };
@@ -178,33 +168,35 @@ main {
     color: black;
     padding: $padding;
     text-align: center;
+    font-family: 'Cormorant Garamond', serif;
 
     @include desktop {
         grid-area: primary;
-        text-align: left;
+
         margin: 4em 0 0 4em;
         
     };
 
-    @include mobile {
-        grid-area: primary; 
-        text-align: center;
-        margin: 1em auto;
-        margin: 4em 0 0 4em;
-    };
+    // @include mobile {
+    //     grid-area: primary; 
+    //     text-align: center;
+    //     margin: 1em auto;
+       
+    // };
 
-    @include small {
-      grid-area: primary; 
-      text-align: center;
+    // @include small {
+    //   grid-area: primary; 
+    //   text-align: center;
 
-      margin: 4em auto;
-      padding: $padding;
-    }
+    //   margin: 4em auto;
+    //   padding: $padding;
+    // }
 
     h2 {
       font-size: 1.7em;
       margin-top: 10px;
       text-transform: uppercase;
+      font-family: 'Cormorant Garamond', serif;
 
       @include desktop {
           width: 30%; //makes each on its own line
@@ -219,6 +211,7 @@ main {
     };
     p {
       font-size: 1.4em;
+      font-family: 'Cormorant Garamond', serif;
     };
     a {
       color: color(primary-dark);
@@ -231,6 +224,7 @@ main {
       text-align: center;
       margin: 50px auto 0 auto;
       padding: $padding;
+      font-family: 'Cormorant Garamond', serif;
 
       @include desktop {
         display: inline-block;
@@ -248,35 +242,37 @@ main {
   };
 };
 
-}
+
 footer {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.2em;
+  text-shadow: #333;
     background-color: color(primary-light);
+    padding: 20px;
+      position:absolute;
+      bottom:0;
+      width:100%;
+      height:60px;   /* Height of the footer */
+
 }
-// /* This CSS won't print because %equal-heights is never extended. */
-// %equal-heights {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-// // This CSS will print because %message-shared is extended.
-%message-shared {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-};
-.message {
-  @extend %message-shared;
-};
-.success {
-  @extend %message-shared;
-  border-color: green;
-};
-.error {
-  @extend %message-shared;
-  border-color: red;
-};
-.warning {
-  @extend %message-shared;
-  border-color: yellow;
+
+.cardContainer {
+  color:black;
+  font-size: 18px;
+  font-style: unset;
+
+.col-12 {
+  margin-top: 15px;
+}
+
+.col-sm-5 {
+  
+  margin: 1em auto;
+  background-color:  #B7FF00
+  
+}
+
 };
 
 /* Header Animation */
