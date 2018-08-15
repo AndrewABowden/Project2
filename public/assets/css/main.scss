@@ -4,16 +4,16 @@ $small: 660px;
 
 //responsive media queries, for 840px desktop
 @mixin desktop {
-    @media (min-width: #{$desktop}) {
-        @content;
-    }
-};
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
 
 @mixin mobile {
-    @media (min-width: #{$mobile}) {
-        @content;
-    }
-};
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
 
 @mixin small {
   @media (max-width: #{$small}) {
@@ -23,15 +23,15 @@ $small: 660px;
 //primary is a key because the $ sign.
 //alt L + 0 to open live server, port 5500
 $colors: (
-primary: rgb(46, 4, 63), //key primary
-accent: #fff6bb, //key accent
-primary-light: lighten(rgb(46, 4, 63), 50%),
-primary-dark: darken(rgb(46, 4, 63), 70%)
+  primary: rgb(46, 4, 63),
+  // key primary accent: #fff6bb,
+  // key accent primary-light: lighten(rgb(46, 4, 63), 50%),
+  primary-dark: darken(rgb(46, 4, 63), 70%)
 );
 
 @function color($color-name) {
   @return map-get($colors, primary);
-};
+}
 
 $padding: 15px;
 $borders: 15px;
@@ -39,16 +39,16 @@ $borders: 15px;
 body,
 html {
   height: 100%;
-};
+}
 
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
-};
+}
 
 body {
   // background-color: map-get($colors, primary);//argument, then primary is key.
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   margin: 0;
 
   .center {
@@ -61,13 +61,13 @@ body {
     position: fixed;
     min-height: 100%;
     min-width: 100%;
-  };
- 
+  }
+
   .navLinks {
     margin-top: -20px;
     width: 100%;
     text-align: center;
-    padding-left:0px;
+    padding-left: 0px;
   }
   .navLinks a {
     color: whitesmoke;
@@ -78,184 +78,178 @@ body {
     margin-top: 1.3em;
     text-decoration: uppercase;
     animation: bounceIn 3s;
-    font-family: 'Cormorant Garamond', serif;
-  };
-
-};
+    font-family: "Cormorant Garamond", serif;
+  }
+}
 // Main content class, lighter color
 .content {
   background-color: rgb(220, 221, 210);
-} 
+}
+
+.cardData {
+  text-align: left;
+}
 main {
-   
-    @include desktop {
-        display: grid;
-        grid-template-columns: 50% auto;
-        grid-template-areas: "primary card";    
-    };
+  @include desktop {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "primary card";
+  }
 
-    @include mobile {
-      display: grid;
-      grid-template-columns:  50% auto;
-      grid-template-areas: "primary card";
-    };
+  @include mobile {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "primary card";
+  }
 
-    @include small {
-     padding-top: 20px;
-      grid-template-areas: "primary card";
-    }
-   
+  @include small {
+    padding-top: 20px;
+    grid-template-areas: "primary card";
+  }
+
   section#card {
-    
     background: rgb(46, 4, 63);
     color: ghostwhite;
-    margin: .7em auto; //Centers section
+    margin: 0.7em auto; //Centers section
     border-radius: $borders;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     // 0 is x value, 10px is y value. || blur radius 30px || .2 is the opacity.
     width: 80%;
     padding: 10px;
- 
 
     h2 {
-        margin: 1em auto;
-        text-align: center;
-        margin-bottom: 0;
-        animation: bounceIn 4s;
-        font-size: 1.3em;
+      margin: .6em auto;
+      text-align: center;
+      margin-bottom: 0;
+      animation: bounceIn 3s;
+      font-size: 1.5em;
+      color: whitesmoke;
+      
     }
-    
+    p {
+      display: inline-block;
+      margin-left: max(15px);
+      margin-top: 10px;
+    }
+    p.cardData {
+      font-style: initial; 
+    }
     @include desktop {
-        grid-area: card;
-        height: fit-content;
-        align-self: center;
-        margin: 1em;
-    };
+      grid-area: card;
+      height: fit-content;
+      align-self: center;
+      margin: 1em;
+    }
 
     @include mobile {
-        grid-area: card;
-        align-self: center;
-        margin: 1em auto;
-    };
-    @include small {
       grid-area: card;
-        height: fit-content;
-        align-self: center;       
+      align-self: center;
       margin: 1em auto;
     }
-  };
-  
-  p {
-    display: inline-block;
-    margin-left: max(15px);
-    margin-top: 10px;
-    
-    };
-  };
+    @include small {
+      grid-area: card;
+      height: fit-content;
+      align-self: center;
+      margin: 1em auto;
+    }
+  }
+}
+section#primary {
+  color: black;
+  padding: $padding;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
 
-  section#primary {
-    color: black;
-    padding: $padding;
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
+  @include desktop {
+    grid-area: primary;
+    margin: 4em 0 0 4em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  
+    font-family: "Cormorant Garamond", serif;
 
     @include desktop {
-        grid-area: primary;
-        margin: 4em 0 0 4em;
-    };
-
-    h3 {
-      font-size: 1.3em;
-      margin-top: 10px;
-      font-family: 'Cormorant Garamond', serif;
-
-      @include desktop {
-   //makes each on its own line
-          font-size: 2em
-        };
-        @include mobile {
-            font-size: 1.5em;
-        }
-        @include small {
-          font-size: 1.2em;
-        }
-    };
-    p {
-      font-size: 1.4em;
-      font-family: 'Cormorant Garamond', serif;
-    };
-    a {
-      color: color(primary-dark);
-      border-radius: $borders;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      background-color: color(accent);
-      display: block;
-      text-align: center;
-      margin: 50px auto 0 auto;
-      padding: $padding;
-      font-family: 'Cormorant Garamond', serif;
-
-      @include desktop {
-        display: inline-block;
-        padding: $padding $padding * 4; //right and left, multiplies by 4 for desktop button vis
-        
-    };
+      //makes each on its own line
+      font-size: 2em;
+    }
     @include mobile {
-        display: inline-block;
-        padding: $padding $padding * 4;
-    };
+      font-size: 1.5em;
+    }
+    @include small {
+      font-size: 1.2em;
+    }
+  }
+  p {
+    font-size: 1.4em;
+    font-family: "Cormorant Garamond", serif;
+  }
+  a {
+    color: color(primary-dark);
+    border-radius: $borders;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: color(accent);
+    display: block;
+    margin: 50px auto 0 auto;
+    padding: $padding;
+    font-family: "Cormorant Garamond", serif;
+
+    @include desktop {
+      display: inline-block;
+      padding: $padding $padding * 4; //right and left, multiplies by 4 for desktop button vis
+    }
+    @include mobile {
+      display: inline-block;
+      padding: $padding $padding * 4;
+    }
     @include small {
       display: inline-block;
       padding: $padding;
     }
-  };
-};
-
+  }
+}
 
 footer {
   text-align: center;
   color: whitesmoke;
   font-size: 1.2em;
   text-shadow: #333;
-    background-color: color(primary-light);
-    padding: 20px;
-      position:absolute;
-      bottom:0;
-      width:100%;
-      height:60px;   /* Height of the footer */
-
+  background-color: color(primary-light);
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Height of the footer */
 }
 
 .cardContainer {
-  color:black;
+  color: black;
   font-size: 18px;
 
-.col-11 {
-  margin-top: 10px;
-}
+  .col-11 {
+    margin-top: 10px;
+  }
 
-.col-sm-5 {
-margin: .5em auto;
-  background-color:  #B7FF00
-  
+  .col-sm-5 {
+    margin: 0.5em auto;
+    background-color: #b7ff00;
+  }
 }
-
-};
 
 /* Header Animation */
 @keyframes bounceIn {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
   }
-  
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
