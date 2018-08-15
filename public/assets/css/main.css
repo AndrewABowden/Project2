@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Monteserrat";
+  font-family: "Cormorant Garamond", serif;
   margin: 0;
 }
 
@@ -20,18 +20,10 @@ body .center {
 }
 
 body #bg {
-  background-image: url("http://wallpapersdsc.net/wp-content/uploads/2016/09/Cocktail-HD.jpg");
-  min-width: 100%;
+  background-image: url("../images/black_denim.png");
+  position: fixed;
   min-height: 100%;
-  background-size: cover;
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
-  z-index: -1;
-}
-
-body #bg #smallbg {
-  background-image: url("assets/images/bgsmall.jpg");
+  min-width: 100%;
 }
 
 body .navLinks {
@@ -52,10 +44,15 @@ body .navLinks a {
           text-decoration: uppercase;
   -webkit-animation: bounceIn 3s;
           animation: bounceIn 3s;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .content {
   background-color: #dcddd2;
+}
+
+.cardData {
+  text-align: left;
 }
 
 @media (min-width: 840px) {
@@ -88,7 +85,7 @@ body .navLinks a {
 main section#card {
   background: #2e043f;
   color: ghostwhite;
-  margin: .7em auto;
+  margin: 0.7em auto;
   border-radius: 15px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -97,12 +94,23 @@ main section#card {
 }
 
 main section#card h2 {
-  margin: 1em auto;
+  margin: .6em auto;
   text-align: center;
   margin-bottom: 0;
-  -webkit-animation: bounceIn 4s;
-          animation: bounceIn 4s;
-  font-size: 1.3em;
+  -webkit-animation: bounceIn 3s;
+          animation: bounceIn 3s;
+  font-size: 1.5em;
+  color: whitesmoke;
+}
+
+main section#card p {
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+main section#card p.cardData {
+  font-style: initial;
 }
 
 @media (min-width: 840px) {
@@ -141,71 +149,50 @@ main section#card h2 {
   }
 }
 
-main p {
-  display: inline-block;
-  margin-left: 15px;
-  margin-top: 12px;
+main #card-Ingredients {
+  padding: 20px;
 }
 
 section#primary {
   color: black;
   padding: 15px;
   text-align: center;
+  font-family: "Cormorant Garamond", serif;
 }
 
 @media (min-width: 840px) {
   section#primary {
     grid-area: primary;
-    text-align: left;
     margin: 4em 0 0 4em;
   }
 }
 
-@media (min-width: 661px) {
-  section#primary {
-    grid-area: primary;
-    text-align: center;
-    margin: 1em auto;
-    margin: 4em 0 0 4em;
-  }
-}
-
-@media (max-width: 660px) {
-  section#primary {
-    grid-area: primary;
-    text-align: center;
-    margin: 4em auto;
-    padding: 15px;
-  }
-}
-
-section#primary h2 {
-  font-size: 1.7em;
-  margin-top: 10px;
-  text-transform: uppercase;
+section#primary h3 {
+  font-size: 1.3em;
+  font-family: "Cormorant Garamond", serif;
 }
 
 @media (min-width: 840px) {
-  section#primary h2 {
-    width: 30%;
-    font-size: 4em;
+  section#primary h3 {
+    font-size: 2em;
   }
 }
 
 @media (min-width: 661px) {
-  section#primary h2 {
-    font-size: 2.5em;
-  }
-}
-
-@media (max-width: 660px) {
-  section#primary h2 {
+  section#primary h3 {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 660px) {
+  section#primary h3 {
+    font-size: 1.2em;
   }
 }
 
 section#primary p {
   font-size: 1.4em;
+  font-family: "Cormorant Garamond", serif;
 }
 
 section#primary a {
@@ -216,9 +203,9 @@ section#primary a {
   font-weight: bold;
   background-color: #2e043f;
   display: block;
-  text-align: center;
   margin: 50px auto 0 auto;
   padding: 15px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 @media (min-width: 840px) {
@@ -243,25 +230,31 @@ section#primary a {
 }
 
 footer {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.2em;
+  text-shadow: #333;
   background-color: #2e043f;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Height of the footer */
 }
 
-.message, .success, .error, .warning {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+.cardContainer {
+  color: black;
+  font-size: 18px;
 }
 
-.success {
-  border-color: green;
+.cardContainer .col-11 {
+  margin-top: 10px;
 }
 
-.error {
-  border-color: red;
-}
-
-.warning {
-  border-color: yellow;
+.cardContainer .col-sm-5 {
+  margin: 0.5em auto;
+  background-color: #b7ff00;
 }
 
 /* Header Animation */
