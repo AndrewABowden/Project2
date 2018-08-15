@@ -46,7 +46,6 @@ html {
   padding-right: 0px;
 };
 
-
 body {
   // background-color: map-get($colors, primary);//argument, then primary is key.
   font-family: 'Cormorant Garamond', serif;
@@ -58,18 +57,10 @@ body {
     margin-right: auto;
   }
   #bg {
-    // clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0);
-    // background-color: black;
-
-    // background-image: url("public/assets/images/black_wood.jpeg");
-       background-image: url("../images/black_denim.png");
-      //  url("https://www.toptal.com/designers/subtlepatterns/patterns/connectwork.png");
-    // background-image: url("http://www.designbolts.com/wp-content/uploads/2012/11/Free-Professional-Dark-Carbon-Patterns.jpg");
-
+    background-image: url("../images/black_denim.png");
     position: fixed;
     min-height: 100%;
     min-width: 100%;
-    // background-size: 100%;
   };
  
   .navLinks {
@@ -94,8 +85,6 @@ body {
 // Main content class, lighter color
 .content {
   background-color: rgb(220, 221, 210);
-  
-  //background-image: url("https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?cs=srgb&dl=cold-alcohol-drinks-1028637.jpg&fm=jpg");
 } 
 main {
    
@@ -159,7 +148,7 @@ main {
   p {
     display: inline-block;
     margin-left: max(15px);
-    margin-top: 12px;
+    margin-top: 10px;
     
     };
   };
@@ -172,41 +161,23 @@ main {
 
     @include desktop {
         grid-area: primary;
-
         margin: 4em 0 0 4em;
-        
     };
 
-    // @include mobile {
-    //     grid-area: primary; 
-    //     text-align: center;
-    //     margin: 1em auto;
-       
-    // };
-
-    // @include small {
-    //   grid-area: primary; 
-    //   text-align: center;
-
-    //   margin: 4em auto;
-    //   padding: $padding;
-    // }
-
-    h2 {
-      font-size: 1.7em;
+    h3 {
+      font-size: 1.3em;
       margin-top: 10px;
-      text-transform: uppercase;
       font-family: 'Cormorant Garamond', serif;
 
       @include desktop {
-          width: 30%; //makes each on its own line
-          font-size: 4em;
+   //makes each on its own line
+          font-size: 2em
         };
         @include mobile {
-            font-size: 2.5em;
+            font-size: 1.5em;
         }
         @include small {
-          font-size: 1.5em;
+          font-size: 1.2em;
         }
     };
     p {
@@ -260,15 +231,13 @@ footer {
 .cardContainer {
   color:black;
   font-size: 18px;
-  font-style: unset;
 
-.col-12 {
-  margin-top: 15px;
+.col-11 {
+  margin-top: 10px;
 }
 
 .col-sm-5 {
-  
-  margin: 1em auto;
+margin: .5em auto;
   background-color:  #B7FF00
   
 }
