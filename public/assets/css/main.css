@@ -149,6 +149,10 @@ main section#card p.cardData {
   }
 }
 
+main #card-Ingredients {
+  padding: 20px;
+}
+
 section#primary {
   color: black;
   padding: 15px;
