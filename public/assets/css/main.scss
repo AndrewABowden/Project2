@@ -228,10 +228,21 @@ footer {
 .cardContainer {
   color: #083643;
   font-size: 18px;
+}
 
-  .col-sm-5 {
-    margin: 0.5em auto;
-  }
+.cardContainer .col-sm-5 {
+  margin: 1.5em auto;
+} 
+
+.card {
+  background-color: whitesmoke;
+  color: #083643;
+  border: 1px solid #B1E001;
+}
+
+.card-header{
+  background-color: #B1E001;
+  color: #083643;
 }
 // =============================================================
 //Drink card end
@@ -256,7 +267,7 @@ footer {
 /*root typeahead class*/
 .twitter-typeahead {
   display: inherit !important;
-  width: 100%;
+  width: 50%;
 }
 
 .twitter-typeahead .tt-input[disabled] {
@@ -321,3 +332,12 @@ background-color : #eeeeee !important;
 }
 //=================================================================
 // Typeahead styles end
+
+// Add Drink Form Styling
+#add-drink-content{
+  background-color: whitesmoke;
+  max-width: 80%;
+  margin: 25px auto;
+  padding: 5px;
+}
+
