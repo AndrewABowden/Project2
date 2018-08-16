@@ -293,7 +293,6 @@ footer {
 
 /*root typeahead class*/
 .twitter-typeahead {
-  display: inherit !important;
   width: 50%;
 }
 
