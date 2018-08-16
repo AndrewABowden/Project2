@@ -59,7 +59,7 @@ $.get("/api/ingredients", function (data) {
         ingredientsNameArray.push(ingredientSuggestion);
         replaceIngredientsDisplay();
         getIngredients(ingredientSuggestion);
-        var ingLI = $("<li>").text(ingredientSuggestion);
+        var ingLI = $("<li>").addClass("ingLI").text(ingredientSuggestion);
         var ingDeleteBtn = $("<button>").addClass("ingDelete").attr("value", ingredientSuggestion).text("Delete").on("click", deleteBtn);
         $(ingLI).append(ingDeleteBtn);
         $(".added-ingredients").append(ingLI);

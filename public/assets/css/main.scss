@@ -50,7 +50,7 @@ body {
   // background-color: map-get($colors, primary);//argument, then primary is key.
   font-family: "Cormorant Garamond", serif;
   margin: 0;
-  background-color: #083643;
+  background-color: #072F3B;
 
   .center {
     display: block;
@@ -104,7 +104,7 @@ main {
 
   section#card {
     background: whitesmoke;
-    color: #083643;
+    color: #072F3B;
     margin: 0.7em auto; //Centers section
     border-radius: $borders;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -226,7 +226,7 @@ footer {
 // Drink card :start
 // =============================================================
 .cardContainer {
-  color: #083643;
+  color: #072F3B;
   font-size: 18px;
 }
 
@@ -236,13 +236,13 @@ footer {
 
 .card {
   background-color: whitesmoke;
-  color: #083643;
+  color: #072F3B;
   border: 1px solid #B1E001;
 }
 
 .card-header{
   background-color: #B1E001;
-  color: #083643;
+  color: #072F3B;
 }
 // =============================================================
 //Drink card end
@@ -334,18 +334,35 @@ background-color : #eeeeee !important;
 // Typeahead styles end
 
 // Add Drink Form Styling
-#add-drink-content{
+#add-drink-content {
   background-color: whitesmoke;
   max-width: 80%;
   margin: 25px auto;
   padding: 5px;
 }
 
-label {
-  margin-top: 12px;
+.ingLI {
+  margin-bottom: 3px;
 }
 
-button {
+label {
+  margin-top: 12px;
+ }
+ 
+ .formBtn {
   margin-bottom: 12px;
   margin-top: 6px
-}
+ }
+
+ .ingDelete {
+  color: #072F3B;
+  border: .5px solid #072F3B;
+  background-color: #B8ECD7;
+ }
+
+ .ingDelete:hover {
+  color: #007bff;
+  border: .5px solid #072F3B;
+  border-radius: 5px;
+  margin: 0px 5px;
+ }
