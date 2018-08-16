@@ -43,38 +43,66 @@ $.get("/api/ingredients", function (data) {
     // Listener
     $('#ingredients-menu .typeahead').on('typeahead:select', function (ev, ingredientSuggestion) {
         ingredientsNameArray.push(ingredientSuggestion);
-        replaceDisplay();
-        getIngredients();
+        replaceIngredientsDisplay();
+        getIngredients(ingredientSuggestion);
         var ingLI = $("<li>").text(ingredientSuggestion);
         var ingDeleteBtn = $("<button>").addClass("ingDelete").text("Delete");
         $(ingLI).append(ingDeleteBtn);
         $(".added-ingredients").append(ingLI);
         $('.typeahead').typeahead('val', '');
+        drinksDisplay();
     });
 });
 // ============================================================================
 // Typeahead end
 
 //Get ingredient objects from name and populating ingredientObjArray
-function getIngredients() {
-    ingredientsNameArray.forEach((ing) => {
-        $.get("/api/ingredients/" + ing, function (data) {
-            ingredientsObjArray.push(data);
-            console.log(ingredientsObjArray)
-        });
-    })
+function getIngredients(ing) {
+    $.get("/api/ingredients/" + ing, function (data) {
+        ingredientsObjArray.push(data);
+    });
 }
 
 // Replace welcome content w/ ingredient list
-function replaceDisplay() {
+function replaceIngredientsDisplay() {
     if (ingredientsNameArray.length === 1) {
         var ingUL = $("<ul>").addClass("added-ingredients");
         $("#card-Ingredients").replaceWith(ingUL);
     }
 }
 
-// Link typeahead search to drink api
+// Link typeahead and drink_controller
+function drinksDisplay() {
+    var ingredientsID = ingredientsObjArray.map((ing) => {
+        return ing.id
+    }).join('&');
 
-// ingredientsObjArray.forEach((obj) => {
-//     console.log(obj);
-// });
+    $.get("/api/drinks/ingredient/" + ingredientsID)
+        .then((data) => {
+            $("#leftCard").empty();
+            $("#rightCard").empty();
+            data.forEach((drink) => {
+                //do some jQuery here to show the drink
+                console.log(drink);
+                if (drink.missingIngCount === 0) {
+                    // Drinks you can make
+                    // BUTTON --> drink name
+                    var drinkList = $("<button>").addClass("btn btn-link drinkList")
+                    $(drinkList).attr("data-toggle", "collapse").attr("data-target", "#drink-info" + drink.id).attr("aria-expanded", "false").attr("aria-controls", "drink-info" + drink.id);
+                    $(drinkList).text(drink.name);
+                    // DIV --> drink info
+                    var drinkInfo = $("<div>").addClass("collapse").attr("id", "drink-info" + drink.id).text(drink.name);
+                    $("#leftCard").append(drinkList, drinkInfo);
+                } else if (drink.missingIngCount < 3 && drink.missingIngCount > 0) {
+                    //Drinks you can't make yet
+                    // BUTTON --> drink name
+                    var almostDrinkList = $("<button>").addClass("btn btn-link almostDrinkList")
+                    $(almostDrinkList).attr("data-toggle", "collapse").attr("data-target", "#drink-info" + drink.id).attr("aria-expanded", "false").attr("aria-controls", "drink-info" + drink.id);
+                    $(almostDrinkList).text(drink.name);
+                    // DIV --> drink info
+                    var almostDrinkInfo = $("<div>").addClass("collapse").attr("id", "drink-info" + drink.id).text(drink.name);
+                    $("#rightCard").append(almostDrinkList, almostDrinkInfo);
+                }
+            });
+        });
+}
