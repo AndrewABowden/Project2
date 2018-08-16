@@ -266,23 +266,23 @@ footer {
 //=================================================================
 /*root typeahead class*/
 .twitter-typeahead {
-  display: inherit !important;
+  display: inherit;
   width: 50%;
-}
+};
 
 .twitter-typeahead .tt-input[disabled] {
 background-color : #eeeeee !important;
-}
+};
 
 /*Added to input that's initialized into a typeahead*/
 .twitter-typeahead .tt-input {
 
-}
+};
 
 /*Added to hint input.*/
 .twitter-typeahead .hint {
 
-}
+};
 
 /*Added to menu element*/
 .twitter-typeahead .tt-menu {
@@ -358,4 +358,11 @@ label {
   color: #072F3B;
   border: .5px solid #072F3B;
   background-color: #B8ECD7;
+ }
+
+ .ingDelete:hover {
+  color: #007bff;
+  border: .5px solid #072F3B;
+  border-radius: 5px;
+  margin: 0px 5px;
  }

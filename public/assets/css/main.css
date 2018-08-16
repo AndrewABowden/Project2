@@ -236,7 +236,7 @@ footer {
   height: 60px;
   /* Height of the footer */
 }
-/* CARDS */
+
 .cardContainer {
   color: #072F3B;
   font-size: 18px;
@@ -244,7 +244,7 @@ footer {
 
 .cardContainer .col-sm-5 {
   margin: 1.5em auto;
-} 
+}
 
 .card {
   background-color: whitesmoke;
@@ -252,11 +252,10 @@ footer {
   border: 1px solid #B1E001;
 }
 
-.card-header{
+.card-header {
   background-color: #B1E001;
   color: #072F3B;
 }
-/* CARDS */
 
 /* Header Animation */
 @-webkit-keyframes bounceIn {
