@@ -50,17 +50,12 @@ body {
   // background-color: map-get($colors, primary);//argument, then primary is key.
   font-family: "Cormorant Garamond", serif;
   margin: 0;
+  background-color: #083643;
 
   .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-  #bg {
-    background-image: url("../images/black_denim.png");
-    position: fixed;
-    min-height: 100%;
-    min-width: 100%;
   }
 
   .navLinks {
@@ -83,7 +78,7 @@ body {
 }
 // Main content class, lighter color
 .content {
-  background-color: rgb(220, 221, 210);
+  background-color: #B8ECD7;
 }
 
 .cardData {
@@ -108,8 +103,8 @@ main {
   }
 
   section#card {
-    background: rgb(46, 4, 63);
-    color: ghostwhite;
+    background: whitesmoke;
+    color: #083643;
     margin: 0.7em auto; //Centers section
     border-radius: $borders;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -228,19 +223,18 @@ footer {
   height: 60px; /* Height of the footer */
 }
 
+// Drink card :start
+// =============================================================
 .cardContainer {
-  color: black;
+  color: #083643;
   font-size: 18px;
-
-  .col-11 {
-    margin-top: 10px;
-  }
 
   .col-sm-5 {
     margin: 0.5em auto;
-    background-color: #b7ff00;
   }
 }
+// =============================================================
+//Drink card end
 
 /* Header Animation */
 @keyframes bounceIn {
@@ -256,3 +250,74 @@ footer {
     transform: scale(1);
   }
 }
+
+// Typeahead styles start
+//=================================================================
+/*root typeahead class*/
+.twitter-typeahead {
+  display: inherit !important;
+  width: 100%;
+}
+
+.twitter-typeahead .tt-input[disabled] {
+background-color : #eeeeee !important;
+}
+
+/*Added to input that's initialized into a typeahead*/
+.twitter-typeahead .tt-input {
+
+}
+
+/*Added to hint input.*/
+.twitter-typeahead .hint {
+
+}
+
+/*Added to menu element*/
+.twitter-typeahead .tt-menu {
+  width: 100%;
+  max-height: 500px;
+  overflow-y: scroll;
+  border: 1px solid #cccccc;
+
+  -moz-box-shadow: 12px 14px 30px -7px #616161;
+  -webkit-box-shadow: 12px 14px 30px -7px #616161;
+  box-shadow: 12px 14px 30px -7px #616161;
+}
+
+/*Added to dataset elements*/
+.twitter-typeahead .tt-dataset {
+
+}
+
+/*dded to suggestion elements*/
+.twitter-typeahead .tt-suggestion {
+  padding: 3px 20px;
+  white-space: nowrap;
+}
+
+/*Added to menu element when it contains no content*/
+.twitter-typeahead .tt-empty {
+  background-color: white;
+}
+
+/*Added to menu element when it is opened*/
+.twitter-typeahead .tt-open {
+  background-color: white;
+}
+
+/*Added to suggestion element when menu cursor moves to said suggestion*/
+.twitter-typeahead .tt-suggestion:hover,
+.twitter-typeahead .tt-suggestion:focus,
+.twitter-typeahead .tt-cursor {
+  cursor: hand !important;
+  background-color: #337ab7;
+  color: white;
+}
+
+/*Added to the element that wraps highlighted text*/
+.twitter-typeahead .tt-highlight {
+
+}
+//=================================================================
+// Typeahead styles end
