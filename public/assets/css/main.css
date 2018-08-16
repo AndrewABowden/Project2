@@ -11,6 +11,8 @@ html {
 body {
   font-family: "Cormorant Garamond", serif;
   margin: 0;
+  background-color: #083643;
+
 }
 
 body .center {
@@ -19,12 +21,12 @@ body .center {
   margin-right: auto;
 }
 
-body #bg {
+/* body #bg {
   background-image: url("../images/black_denim.png");
   position: fixed;
   min-height: 100%;
   min-width: 100%;
-}
+} */
 
 body .navLinks {
   margin-top: -20px;
@@ -48,7 +50,7 @@ body .navLinks a {
 }
 
 .content {
-  background-color: #dcddd2;
+  background-color: #B8ECD7;
 }
 
 .cardData {
@@ -83,8 +85,8 @@ body .navLinks a {
 }
 
 main section#card {
-  background: #2e043f;
-  color: ghostwhite;
+  background: whitesmoke;
+  color: #083643;
   margin: 0.7em auto;
   border-radius: 15px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -100,7 +102,7 @@ main section#card h2 {
   -webkit-animation: bounceIn 3s;
           animation: bounceIn 3s;
   font-size: 1.5em;
-  color: whitesmoke;
+  color: #083643;
 }
 
 main section#card p {
@@ -190,12 +192,12 @@ section#primary h3 {
   }
 }
 
-section#primary p {
+/* section#primary p {
   font-size: 1.4em;
   font-family: "Cormorant Garamond", serif;
-}
+} */
 
-section#primary a {
+/* section#primary a {
   color: #2e043f;
   border-radius: 15px;
   text-decoration: none;
@@ -206,7 +208,7 @@ section#primary a {
   margin: 50px auto 0 auto;
   padding: 15px;
   font-family: "Cormorant Garamond", serif;
-}
+} */
 
 @media (min-width: 840px) {
   section#primary a {
@@ -243,19 +245,30 @@ footer {
   /* Height of the footer */
 }
 
-.cardContainer {
-  color: black;
+/* Drink card start*/
+/* ==================================================== */
+ .cardContainer {
+  color: #083643;
   font-size: 18px;
 }
 
-.cardContainer .col-11 {
-  margin-top: 10px;
+.cardContainer .col-sm-5 {
+  margin: 1.5em auto;
+} 
+
+.card {
+  background-color: whitesmoke;
+  color: #083643;
+  border: 1px solid #B1E001;
 }
 
-.cardContainer .col-sm-5 {
-  margin: 0.5em auto;
-  background-color: #b7ff00;
+.card-header{
+  background-color: #B1E001;
+  color: #083643;
 }
+/* ==================================================== */
+/* Drink card end*/
+
 
 /* Header Animation */
 @-webkit-keyframes bounceIn {
@@ -290,4 +303,75 @@ footer {
             transform: scale(1);
   }
 }
+
+/* Typeahead styles start
+================================================================= */
+.twitter-typeahead {
+  display: inherit !important;
+  width: 100%;
+}
+
+.twitter-typeahead .tt-input[disabled] {
+background-color : #eeeeee !important;
+}
+
+/*Added to input that's initialized into a typeahead*/
+.twitter-typeahead .tt-input {
+
+}
+
+/*Added to hint input.*/
+.twitter-typeahead .hint {
+
+}
+
+/*Added to menu element*/
+.twitter-typeahead .tt-menu {
+  width: 100%;
+  max-height: 500px;
+  overflow-y: scroll;
+  border: 1px solid #cccccc;
+
+  -moz-box-shadow: 12px 14px 30px -7px #616161;
+  -webkit-box-shadow: 12px 14px 30px -7px #616161;
+  box-shadow: 12px 14px 30px -7px #616161;
+}
+
+/*Added to dataset elements*/
+.twitter-typeahead .tt-dataset {
+
+}
+
+/*dded to suggestion elements*/
+.twitter-typeahead .tt-suggestion {
+  padding: 3px 20px;
+  white-space: nowrap;
+}
+
+/*Added to menu element when it contains no content*/
+.twitter-typeahead .tt-empty {
+  background-color: white;
+}
+
+/*Added to menu element when it is opened*/
+.twitter-typeahead .tt-open {
+  background-color: white;
+}
+
+/*Added to suggestion element when menu cursor moves to said suggestion*/
+.twitter-typeahead .tt-suggestion:hover,
+.twitter-typeahead .tt-suggestion:focus,
+.twitter-typeahead .tt-cursor {
+  cursor: hand !important;
+  background-color: #337ab7;
+  color: white;
+}
+
+/*Added to the element that wraps highlighted text*/
+.twitter-typeahead .tt-highlight {
+
+}
+/* //=================================================================
+// Typeahead styles end */
+
 /*# sourceMappingURL=main.css.map */
