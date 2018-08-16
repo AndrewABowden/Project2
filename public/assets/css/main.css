@@ -11,7 +11,7 @@ html {
 body {
   font-family: "Cormorant Garamond", serif;
   margin: 0;
-  background-color: #083643;
+  background-color: #072F3B;
 }
 
 body .center {
@@ -78,7 +78,7 @@ body .navLinks a {
 
 main section#card {
   background: whitesmoke;
-  color: #083643;
+  color: #072F3B;
   margin: 0.7em auto;
   border-radius: 15px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -238,7 +238,7 @@ footer {
 }
 /* CARDS */
 .cardContainer {
-  color: #083643;
+  color: #072F3B;
   font-size: 18px;
 }
 
@@ -248,13 +248,13 @@ footer {
 
 .card {
   background-color: whitesmoke;
-  color: #083643;
+  color: #072F3B;
   border: 1px solid #B1E001;
 }
 
 .card-header{
   background-color: #B1E001;
-  color: #083643;
+  color: #072F3B;
 }
 /* CARDS */
 
@@ -348,4 +348,31 @@ footer {
   padding: 5px;
 }
 
+.ingLI {
+  margin-bottom: 3px;
+}
+
+label {
+  margin-top: 12px;
+ }
+ 
+ .formBtn {
+  margin-bottom: 12px;
+  margin-top: 6px
+ }
+
+ .ingDelete {
+  color: #072F3B;
+  border: .5px solid #072F3B;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin: 0px 5px;
+ }
+
+ .ingDelete:hover {
+  color: #007bff;
+  border: .5px solid #072F3B;
+  border-radius: 5px;
+  margin: 0px 5px;
+ }
 /*# sourceMappingURL=main.css.map */
