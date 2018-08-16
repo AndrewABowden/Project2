@@ -134,7 +134,7 @@ function drinksDisplay() {
 
     // Drink cards
     function cardBuilder(drinkCardInfo) {
-        var drinkInfo = $("<div>").addClass("collapse").attr("id", "drink-info" + drinkCardInfo.drinkID);
+        var drinkInfo = $("<div>").addClass("collapse card card-body").attr("id", "drink-info" + drinkCardInfo.drinkID);
         var contentUL = $("<ul>")
         drinkCardInfo.contents.forEach((content) => {
             var contentLI = $("<li>").text(content.ingridentAmount + " " + content.ingridentName);
