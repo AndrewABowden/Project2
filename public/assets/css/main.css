@@ -236,7 +236,7 @@ footer {
   height: 60px;
   /* Height of the footer */
 }
-/* CARDS */
+
 .cardContainer {
   color: #083643;
   font-size: 18px;
@@ -244,7 +244,7 @@ footer {
 
 .cardContainer .col-sm-5 {
   margin: 1.5em auto;
-} 
+}
 
 .card {
   background-color: whitesmoke;
@@ -252,11 +252,10 @@ footer {
   border: 1px solid #B1E001;
 }
 
-.card-header{
+.card-header {
   background-color: #B1E001;
   color: #083643;
 }
-/* CARDS */
 
 /* Header Animation */
 @-webkit-keyframes bounceIn {
@@ -348,4 +347,12 @@ footer {
   padding: 5px;
 }
 
+label {
+  margin-top: 12px;
+}
+
+button {
+  margin-bottom: 12px;
+  margin-top: 6px;
+}
 /*# sourceMappingURL=main.css.map */

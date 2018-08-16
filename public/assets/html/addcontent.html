@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 
     <title>Drink Wizard</title>
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -23,9 +24,23 @@
     <link rel="stylesheet" href="../css/reset.css">
     <!--  <link rel='stylesheet' href='/assets/css/main.css'> -->
     <link rel="stylesheet" href="../css/main.css">
+    
 </head>
 
 <body>
+
+        <header id="headerWrapper">
+                <img src="../images/temp_logo.png" id="logo" alt="logoimg" class="center">
+            </header>
+            <div class='container-fluid'>
+                <nav>
+                    <div class='navLinks'>
+                        <a href="/" class="icon text-center">Home
+                            <i class="fa fa-magic"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
     <!-- id="body-style"> -->
     <div id="add-drink-content">
         <!-- Begin form for adding ingredient-->
@@ -63,7 +78,7 @@
                     <div id="newIngDiv1">
                         <label form="add-drink">Name: </label><input id="ingredient1" class="ing-typeahead"
                             type="text" placeholder="Ingredient name"><label form="add-drink">Amount: </label><input id="ingredientAmt1"
-                            type="text" placeholder="Ingredient amount"><label form="add-drink">Delete row</label>
+                            type="text" placeholder="Ingredient amount"><label form="add-drink"> Delete row</label>
                             <input class="del-row" type="checkbox" id="delRow1">
                     </div>
                 </div>
