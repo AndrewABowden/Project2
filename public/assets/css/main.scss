@@ -268,21 +268,21 @@ footer {
 .twitter-typeahead {
   display: inherit !important;
   width: 50%;
-}
+};
 
 .twitter-typeahead .tt-input[disabled] {
 background-color : #eeeeee !important;
-}
+};
 
 /*Added to input that's initialized into a typeahead*/
 .twitter-typeahead .tt-input {
 
-}
+};
 
 /*Added to hint input.*/
 .twitter-typeahead .hint {
 
-}
+};
 
 /*Added to menu element*/
 .twitter-typeahead .tt-menu {
@@ -341,3 +341,11 @@ background-color : #eeeeee !important;
   padding: 5px;
 }
 
+label {
+  margin-top: 12px;
+}
+
+button {
+  margin-bottom: 12px;
+  margin-top: 6px
+}
