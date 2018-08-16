@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Drink Wizard</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/typeahead.jquery.js"></script>
+    <script src="../js/addContent.js"></script>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <!--  <link rel='stylesheet' href='/assets/css/main.css'> -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- id="body-style"> -->
+    <!-- Begin form for adding ingredient-->
+    <form class="add-ingredient">
+        <div class="form-group">
+            <label form="add-ingredient">Ingredient: </label><input type="text" id="ingredientName" name="name"><br>
+            <label form="add-ingredient">Description: </label><input type="text" id="ingredientDesc" name="desc">
+        </div>
+        <button type="submit">Add Ingredient.</button>
+    </form>
+
+    <!-- End form for adding ingredient -->
+    <br><br>
+    <hr><br><br>
+    <!-- Begin form for adding drink -->
+<!--  <form class="add-drink"> -->
+        <div class="form-group">
+            <label form="add-drink">Name: </label><input type="text" id="drinkName" name="name">
+            <br>
+            <label form="add-drink">Description: </label>
+            <br>
+            <textarea rows="4" cols="50" id="drinkDesc" form="add-drink"></textarea>
+            <br>
+            <label form="add-drink">Glass: </label><select id="drinkGlass" name="drinkGlass">
+                <option value="Balloon Glass">Balloon Glass</option>
+                <option value="Beer Glass">Beer Glass</option>
+                <option value="Beer Mug">Beer mug</option>
+                <option value="Beer pilsner">Beer pilsner</option>
+            </select>
+            <br>
+            <label form="add-drink">Thumb nail URL: </label><input type="text" id="thumbNail" name="thumbNail"><br>
+            <label form="add-drink">Instructions: </label><br>
+            <textarea rows="4" cols="50" id="drinkInstructions" form="add-drink"></textarea>
+            <div id="addDrinkIngs">
+                <div id="drinkIngs">
+                    <div id="newIngDiv1"><label form="add-drink">Name: </label><input id="ingredient1" class="ing-typeahead"
+                            type="text" placeholder="Ingredient name"><label form="add-drink">Amount: </label><input id="ingredientAmt1"
+                            type="text" placeholder="Ingredient amount"><label form="add-drink">Delete row</label><input class="del-row"
+                            type="checkbox" id="delRow1"></div>
+                </div>
+                <button id="add-additional-ing">Another Ingredient?</button>
+            </div>
+            <form class="add-drink">
+            <button type="submit">Add Drink.</button>
+        </form>
+    </div>
+        <!-- End form for adding drink -->
+
+</body>
+
+</html>
