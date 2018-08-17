@@ -24,32 +24,35 @@
     <link rel="stylesheet" href="../css/reset.css">
     <!--  <link rel='stylesheet' href='/assets/css/main.css'> -->
     <link rel="stylesheet" href="../css/main.css">
-    
+
 </head>
 
 <body>
-
-        <header id="headerWrapper">
-                <img src="../images/temp_logo.png" id="logo" alt="logoimg" class="center">
-            </header>
-            <div class='container-fluid'>
-                <nav>
-                    <div class='navLinks'>
-                        <a href="/" class="icon text-center">Home
-                            <i class="fa fa-magic"></i>
-                        </a>
-                    </div>
-                </nav>
+    <header id="headerWrapper">
+        <img src="../images/temp_logo.png" id="logo" alt="logoimg" class="center">
+    </header>
+    <div class='container-fluid'>
+        <nav>
+            <div class='navLinks'>
+                <a href="/" class="icon text-center">Home
+                    <i class="fa fa-magic"></i>
+                </a>
             </div>
+        </nav>
+    </div>
     <!-- id="body-style"> -->
     <div id="add-drink-content">
         <!-- Begin form for adding ingredient-->
+
         <form class="add-ingredient">
-            <div class="form-group">
-                <label form="add-ingredient">Ingredient: </label><input type="text" id="ingredientName" name="name"><br>
-                <label form="add-ingredient">Description: </label><input type="text" id="ingredientDesc" name="desc">
+            <div class="form-inline">
+                <label form="add-ingredient">Ingredient: </label>
+                <input type="text" class="form-control" id="ingredientName" name="name">
+                <br>
+                <label form="add-ingredient">Description: </label>
+                <input type="text" class="form-control" id="ingredientDesc" name="desc">
+                <button type="submit" class="formBtn">Add Ingredient.</button>
             </div>
-            <button type="submit" class="formBtn">Add Ingredient.</button>
         </form>
         <!-- End form for adding ingredient -->
         <br><br>
@@ -57,29 +60,40 @@
         <!-- Begin form for adding drink -->
         <!--  <form class="add-drink"> -->
         <div class="form-group">
-            <label form="add-drink">Name: </label><input type="text" id="drinkName" name="name">
+            <label form="add-drink">Name: </label>
+            <input type="text" class="form-control" id="drinkName" name="name">
             <br>
             <label form="add-drink">Description: </label>
             <br>
-            <textarea rows="4" cols="50" id="drinkDesc" form="add-drink"></textarea>
+            <textarea rows="4" cols="50" id="drinkDesc" class="form-control" form="add-drink"></textarea>
             <br>
-            <label form="add-drink">Glass: </label><select id="drinkGlass" name="drinkGlass">
-                <option value="Balloon Glass">Balloon Glass</option>
-                <option value="Beer Glass">Beer Glass</option>
-                <option value="Beer Mug">Beer mug</option>
-                <option value="Beer pilsner">Beer pilsner</option>
-            </select>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label form="add-drink">Glass: </label>
+                    <select class="form-control" id="drinkGlass" name="drinkGlass">
+                        <option value="Balloon Glass">Balloon Glass</option>
+                        <option value="Beer Glass">Beer Glass</option>
+                        <option value="Beer Mug">Beer mug</option>
+                        <option value="Beer pilsner">Beer pilsner</option>
+                    </select>
+                </div>
+            </div>
             <br>
-            <label form="add-drink">Thumb nail URL: </label><input type="text" id="thumbNail" name="thumbNail"><br>
-            <label form="add-drink">Instructions: </label><br>
+            <label form="add-drink">Thumb nail URL: </label>
+            <input type="text" id="thumbNail" name="thumbNail">
+            <br>
+            <label form="add-drink">Instructions: </label>
+            <br>
             <textarea rows="4" cols="50" id="drinkInstructions" form="add-drink"></textarea>
             <div id="addDrinkIngs">
                 <div id="drinkIngs">
-                    <div id="newIngDiv1">
-                        <label form="add-drink">Name: </label><input id="ingredient1" class="ing-typeahead"
-                            type="text" placeholder="Ingredient name"><label form="add-drink">Amount: </label><input id="ingredientAmt1"
-                            type="text" placeholder="Ingredient amount"><label form="add-drink"> Delete row</label>
-                            <input class="del-row" type="checkbox" id="delRow1">
+                    <div id="newIngDiv1" class="form-inline">
+                        <label form="add-drink">Name: </label>
+                        <input id="ingredient1" class="ing-typeahead form-control" type="text" placeholder="Ingredient name">
+                        <label form="add-drink">Amount: </label>
+                        <input id="ingredientAmt1" class="form-control" type="text" placeholder="Ingredient amount">
+                        <label form="add-drink" class="form-check-label"> Delete row</label>
+                        <input class="del-row form-check-input" type="checkbox" id="delRow1">
                     </div>
                 </div>
                 <button id="add-additional-ing" class="formBtn">Another Ingredient?</button>
